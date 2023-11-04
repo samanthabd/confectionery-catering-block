@@ -1,0 +1,42 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-the-confectionery-catering-package-catering-package {
+  --title-font-size: 3rem;
+  --box-margin-offest: calc( var(--title-font-size) * .5);
+  position: relative;
+  border: 2px solid var(--wp--preset--color--pink);
+  max-width: 25em !important;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-block-start: var(--box-margin-offest);
+}
+:where(.wp-block-the-confectionery-catering-package-catering-package) p {
+  margin: 0;
+  padding: 0;
+}
+:where(.wp-block-the-confectionery-catering-package-catering-package) .catering-package__title {
+  font-family: var(--wp--custom--font--title);
+  background-color: var(--wp--custom--background-color, #FFFAFB);
+  padding-inline: 5px;
+  font-size: var(--title-font-size);
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  transform: translateY(-60%);
+  margin: 0;
+}
+:where(.wp-block-the-confectionery-catering-package-catering-package) .catering-package__price {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

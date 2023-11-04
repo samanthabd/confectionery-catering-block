@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "the-confectionery-catering-package/catering-package",
+  "version": "0.1.0",
+  "title": "Catering Package",
+  "category": "the-confectionery",
+  "description": "Catering package information",
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/heading",
+        "attributes": {
+          "level": 3,
+          "className": "catering-package__title",
+          "content": "Sweet Tooth"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "className": "catering-package__info",
+          "content": "3 pieces per person minimum\\n 3 dessert options to choose"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "className": "catering-package__price",
+          "content": "$8 per person"
+        }
+      }
+    ]
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "catering-package",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

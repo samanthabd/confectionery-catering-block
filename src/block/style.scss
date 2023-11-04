@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-the-confectionery-catering-package-catering-package {
+	--title-font-size: 3rem;
+	// ensure there is space where the title will extend above box
+	--box-margin-offest: calc( var(--title-font-size) * .5);
+
+	position: relative;
+	border: 2px solid var(--wp--preset--color--pink);
+	max-width: 25em !important;
+	padding: 2rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
+	margin-block-start: var(--box-margin-offest);
+
+	:where(&) p {
+		margin: 0;
+		padding: 0;
+	}
+
+	:where(&) .catering-package__title {
+		font-family: var(--wp--custom--font--title);
+		background-color: var(--wp--custom--background-color, #FFFAFB);
+		padding-inline: 5px;
+    font-size: var(--title-font-size);
+    line-height: 1;
+		position: absolute;
+		top: 0;
+		transform: translateY(-60%);
+		margin: 0;
+	}
+
+	:where(&) .catering-package__price {
+		margin-top: 1rem;
+	}
+}
