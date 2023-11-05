@@ -5,30 +5,11 @@
  */
 import { __ } from '@wordpress/i18n';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps, InnerBlocks, useInnerBlocksProps } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
- */
+
 export default function Edit() {
 	const blockProps = useBlockProps(
 		{ className: 'catering-package'}
@@ -40,8 +21,10 @@ export default function Edit() {
 				[ 'core/paragraph', { placeholder: 'Package info...',  className: 'catering-package__info' } ],
 				[ 'core/paragraph', { placeholder: 'Price',  className: 'catering-package__price' } ],
 	]
-	
-	const innerBlocksProps = useInnerBlocksProps(blockProps,
+
+	const innerBlocksProps = useInnerBlocksProps(
+		//to prevent Wordpress from adding extra elements that break the layout
+		blockProps,
 		{template: TEMPLATE },
 		{	allowedBlocks: ALLOWED_BLOCKS },
 		{templateLock: 'insert'}

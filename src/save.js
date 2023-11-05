@@ -1,10 +1,4 @@
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps, InnerBlocks, useInnerBlocksProps } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
 
 export default function save() {
 	const blockProps = useBlockProps.save(
@@ -17,7 +11,8 @@ export default function save() {
 		[ 'core/paragraph', { placeholder: 'Price',  className: 'catering-package__price' } ],
 ]
 
-const innerBlocksProps = useInnerBlocksProps.save ( blockProps,
+const innerBlocksProps = useInnerBlocksProps.save (
+	blockProps,
 	{template: TEMPLATE },
 	{	allowedBlocks: ALLOWED_BLOCKS },
 	{templateLock: 'insert'}
