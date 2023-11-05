@@ -1,5 +1,3 @@
-import React from "react";
-
 function CupcakeIcon() {
   return (<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
 	<path d="M24.52 13.01H7.5C5.57 13.01 4 14.58 4 16.51C4 18.44 5.57 20.01 7.5 20.01H24.52C26.45 20.01 28.02 18.44 28.02 16.51C28.02 14.58 26.45 13.01 24.52 13.01Z" fill="url(#paint0_linear_18_31451)"/>

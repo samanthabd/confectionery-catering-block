@@ -40,6 +40,7 @@ export default function Edit() {
 				[ 'core/paragraph', { placeholder: 'Package info...',  className: 'catering-package__info' } ],
 				[ 'core/paragraph', { placeholder: 'Price',  className: 'catering-package__price' } ],
 	]
+	
 	const innerBlocksProps = useInnerBlocksProps(blockProps,
 		{template: TEMPLATE },
 		{	allowedBlocks: ALLOWED_BLOCKS },

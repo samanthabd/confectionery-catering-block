@@ -26,21 +26,9 @@ if (!defined('ABSPATH')) {
  */
 function catering_packages_block_init()
 {
-	register_block_type(__DIR__ . '/build/block');
+	register_block_type(__DIR__ . '/build');
 }
 add_action('init', 'catering_packages_block_init');
-
-
-function the_confectionery_blocks_editor_assets()
-{
-	wp_enqueue_script(
-		'confectionery-category',
-		plugin_dir_url(__FILE__) . 'build/category/index.js',
-		['wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'],
-		'0.1.0'
-	);
-}
-add_action('enqueue_block_editor_assets', 'the_confectionery_blocks_editor_assets');
 
 
 function add_block_category()
